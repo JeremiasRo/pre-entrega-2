@@ -1,0 +1,187 @@
+/* reset */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+
+/* estilos del header*/
+
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*menu*/
+
+body header{
+    background-color: #EB1D36;
+   
+    top:0%;
+    z-index: 2;
+    padding: 10px;
+}
+
+
+.menu ul li{
+    display: inline-block;
+    margin: 20px;
+    border: 1px black solid;
+    }
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+a:hover{color:gold;}
+
+header nav ul li{
+    list-style:none;
+    text-align: right;
+}
+
+/*estilos del body*/
+
+.bodyIndex{
+    background-image:url("../img/foto-gym.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+body main h1{
+    text-align: center;
+    margin: 0px ;
+    padding: 400px;
+    
+}
+
+.mainHistoria{
+    height: 90vh;
+    background-color:#F5EFE6 ;
+}
+
+.mainHistoria p{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mainHistoria img{
+    margin: 1rem;
+}
+
+.mainLocales{
+    display: flex;
+    flex-direction: column;
+    background-color:#F5EFE6
+}
+
+.mainLocales{
+    text-align: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.mainLocales h2{
+    margin: 1rem;
+}
+
+.mainLocales iframe{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.mainLocales p{
+    font-weight: bold;
+}
+.mainVestimenta{
+    display: flex;
+    justify-content: space-around;
+    background-color:#F5EFE6 ;
+    height: 90vh;
+}
+
+.mainVestimenta .card{
+    margin: 3rem;
+}
+
+    /*estilos del footer*/
+
+footer{
+    text-align: center;
+    background-color: coral;
+    padding: 10px;
+    position: sticky;
+    
+}
+
+/*media queries*/
+
+@media (min-width:800px){
+
+body header{
+    display: block;
+    display:flex;
+    
+    justify-content: space-around;
+}
+.mainHistoria{
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-areas: 
+    "img p-uno"
+    "img p-dos";
+}
+
+.mainHistoria img{
+    grid-area: img;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+}
+
+.mainHistoria .primerParrafo{
+    grid-area: p-uno;
+    margin-top: 8rem;
+}
+
+.mainHistoria .segundoParrafo{
+    grid-area: p-dos;
+}
+
+.mainLocales{
+   display: grid;
+   
+   grid-template-areas: 
+   "h2 p"
+   "iframe p";
+   align-items: center;
+}
+
+.mainLocales h2{
+    grid-area: h2;
+}
+
+.mainLocales iframe{
+    grid-area: iframe;
+    margin-left: 6rem;
+}
+
+.mainLocales p{
+    grid-area: p;
+    margin-right: 6rem;
+}
+
+.mainVestimenta{
+   align-items: center;
+   justify-content: center;
+}
